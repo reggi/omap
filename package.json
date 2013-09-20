@@ -1,0 +1,17 @@
+{
+  "name": "object-mapper",
+  "version": "0.0.0",
+  "description": "Maps object to array of possible keys.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Reggi",
+  "license": "BSD",
+  "dependencies": {
+    "underscore": "~1.5.2"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0"
+  }
+}
