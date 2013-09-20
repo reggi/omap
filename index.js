@@ -1,7 +1,7 @@
 var _ = require("underscore");
 var helper = require("./helper.js");
 
-var mapper = function(incomming, potential){
+module.exports = function(incomming, potential){
     var outgoing = {};
     _.each(potential, function(potential_keys, key){
         var forsight = helper.potential_value(incomming, potential_keys);
@@ -9,5 +9,3 @@ var mapper = function(incomming, potential){
     });
     return outgoing;
 }
-
-module.exports = mapper;

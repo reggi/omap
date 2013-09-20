@@ -25,11 +25,10 @@ helper.inflate = function(array){
 }
 
 helper.lowercase_array = function(array){
-    var lowercase = [];
-    _.each(array, function(value){
-        lowercase.push(value.toLowerCase());
-    });
-    return lowercase;
+    var delimiter = "!$%&";
+    var tmp = array.join(delimiter).toLowerCase();
+    var lowercase_array = tmp.split(delimiter);
+    return lowercase_array;
 }
 
 helper.potential_value = function(incomming, potential_keys){

@@ -1,5 +1,5 @@
 {
-  "name": "object-mapper",
+  "name": "omap",
   "version": "0.0.0",
   "description": "Maps object to array of possible keys.",
   "main": "index.js",
