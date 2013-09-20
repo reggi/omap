@@ -10,12 +10,6 @@ describe('object_mapper helpers', function(){
         output.sort();
         expect(input).to.eql(output);
     });
-    it("should inflate2 array", function(){
-        var input = helper.inflate2(["hello-world"]);
-        var output = [ 'helloworld', 'hello_world', 'hello world', 'hello-world' ];
-        output.sort();
-        expect(input).to.eql(output);
-    });
     it("should lowercase array", function(){
         var input = helper.lowercase_array(["HELLO","WORLD"]);
         var output = ["hello","world"];
