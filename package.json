@@ -13,5 +13,21 @@
   },
   "devDependencies": {
     "expect.js": "~0.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reggi/omap.git"
+  },
+  "keywords": [
+    "object",
+    "mapping",
+    "keys",
+    ""
+  ],
+  "bugs": {
+    "url": "https://github.com/reggi/omap/issues"
   }
 }
