@@ -2,34 +2,7 @@ var _ = require("underscore");
 
 var helper = {};
 
-helper.replace = function(param, string){
-    var array = [];
-    var options = ["", "_", " ", "-"];
-    _.each(options, function(option){
-        array.push(param.replace(string, option));
-    });
-    array.sort();
-    return array;
-}
-
 helper.inflate = function(array){    
-    var inflated_array = [];
-    _.each(array, function(param){
-        if(param.match(/\-/)){
-            inflated_array = inflated_array.concat(helper.replace(param, "-"));
-        }else if(param.match(/\s/)){
-            inflated_array = inflated_array.concat(helper.replace(param, " "));
-        }else if(param.match(/_/)){
-            inflated_array = inflated_array.concat(helper.replace(param, "_"));
-        }else{
-            inflated_array = inflated_array.concat(helper.replace(param, ""));
-        }
-    });
-
-    return inflated_array;
-}
-
-helper.inflate2 = function(array){    
     var inflated_array = [];
     _.each(array, function(param){
         if(param.match(/\-/)){
