@@ -1,10 +1,10 @@
 {
   "name": "omap",
-  "version": "0.0.0",
-  "description": "Maps object to array of possible keys.",
+  "version": "0.0.1",
+  "description": "Maps object key to array of possible keys.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
   "author": "Thomas Reggi",
   "license": "BSD",

@@ -16,21 +16,21 @@ describe('object_mapper helpers', function(){
         expect(input).to.eql(output);
     });
     it("should provied the potential value", function(){
-        var incomming = {"token": "12345qwerty"};
-        var input = helper.potential_value(incomming,["token"]);
-        var output = incomming.token;
+        var incoming = {"token": "12345qwerty"};
+        var input = helper.potential_value(incoming,["token"]);
+        var output = incoming.token;
         expect(input).to.eql(output);
-        var input = helper.potential_value(incomming,["token","access_token"]);
-        var output = incomming.token;
+        var input = helper.potential_value(incoming,["token","access_token"]);
+        var output = incoming.token;
         expect(input).to.eql(output);
-        var input = helper.potential_value(incomming,["access_token","token"]);
-        var output = incomming.token;
+        var input = helper.potential_value(incoming,["access_token","token"]);
+        var output = incoming.token;
         expect(input).to.eql(output);
-        var input = helper.potential_value(incomming,["access_token"]);
-        var output = incomming.token;
+        var input = helper.potential_value(incoming,["access_token"]);
+        var output = incoming.token;
         expect(input).not.be.eql(output);
     });
-    it("should map incomming object to potential", function(){
+    it("should map incoming object to potential", function(){
         var potential = {
             "token": [
                 "access-token",
@@ -38,10 +38,10 @@ describe('object_mapper helpers', function(){
                 "token-access",
             ]
         }
-        var incomming = {
+        var incoming = {
             "Access Token": "12345qwerty"
         }
-        var input = mapper(incomming, potential);
+        var input = mapper(incoming, potential);
         var output = {
             "token": "12345qwerty"
         }

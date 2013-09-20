@@ -25,19 +25,20 @@ helper.inflate = function(array){
 }
 
 helper.lowercase_array = function(array){
-    var delimiter = "!$%&";
-    var tmp = array.join(delimiter).toLowerCase();
-    var lowercase_array = tmp.split(delimiter);
-    return lowercase_array;
+    var lowercase = [];
+    _.each(array, function(value){
+        lowercase.push(value.toLowerCase());
+    });
+    return lowercase;
 }
 
-helper.potential_value = function(incomming, potential_keys){
-    var keys = _.keys(incomming);
+helper.potential_value = function(incoming, potential_keys){
+    var keys = _.keys(incoming);
     var lowercase_keys = helper.lowercase_array(keys);
     var given_case_reference = _.object(lowercase_keys, keys);
     var inflated_potential_keys = helper.inflate(potential_keys);
     var intersection = _.intersection(lowercase_keys, inflated_potential_keys);
-    var value = (intersection.length > 0) ? incomming[given_case_reference[intersection[0]]] : false;
+    var value = (intersection.length > 0) ? incoming[given_case_reference[intersection[0]]] : false;
     return value;
 };
 
